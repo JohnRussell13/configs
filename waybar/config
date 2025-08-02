@@ -2,18 +2,27 @@
   "layer": "top",
   "position": "top",
 
+  "modules-left": ["sway/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["battery", "wireplumber", "backlight", "network", "custom/ping"],
+  
+  "backlight": {
+    "format": "Brightness: {percent}%"
+  },
+
+  "battery": {
+    "format": "Battery: {capacity}%-",
+    "format-charging": "Battery: {capacity}%+"
+  },
+
+  "clock": {
+    "format": "{:%Y-%m-%d %H:%M}"
+  },
+
   "custom/ping": {
     "exec": "~/.config/waybar/ping.sh",
     "interval": 5,
     "format": "{}"
-  },
-
-  "modules-left": ["sway/workspaces"],
-  "modules-center": ["clock"],
-  "modules-right": ["battery", "wireplumber", "backlight", "network", "custom/ping"],
-
-  "clock": {
-    "format": "{:%Y-%m-%d %H:%M}"
   },
 
   "network": {
@@ -22,15 +31,6 @@
     "format-ethernet": "LAN: {ifname}",
     "format-disconnected": "Disconnected",
     "tooltip": true
-  },
-
-  "battery": {
-    "format": "Battery: {capacity}%-",
-    "format-charging": "Battery: {capacity}%+"
-  },
-  
-  "backlight": {
-    "format": "Brightness: {percent}%"
   },
   
   "wireplumber": {

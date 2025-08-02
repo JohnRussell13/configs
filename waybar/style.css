@@ -11,9 +11,10 @@ window#waybar {
 #backlight,
 #battery,
 #clock,
+#custom-ping,
 #network,
 #wireplumber {
-  padding: 0 5px;
+  padding: 5 5 0 5px;
   margin: 0 5px;
   border-radius: 5px;
 }
