@@ -4,7 +4,7 @@
 
   "modules-left": ["sway/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["battery", "wireplumber", "backlight", "network", "custom/ping"],
+  "modules-right": ["battery", "pulseaudio#output", "pulseaudio#input", "backlight", "network", "custom/ping"],
   
   "backlight": {
     "format": "Brightness: {percent}%"
@@ -32,8 +32,14 @@
     "format-disconnected": "Disconnected",
     "tooltip": true
   },
+
+  "pulseaudio#input": {
+    "format-source": "Mic: On",
+    "format-source-muted": "",
+    "format": "{format_source}"
+  },
   
-  "wireplumber": {
+  "pulseaudio#output": {
     "format": "Sound: {volume}%",
     "format-muted": "Sound: Muted"
   }
