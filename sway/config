@@ -31,8 +31,8 @@ output * bg /home/alex/.config/sway/wallpaper.svg fill
     bindsym Mod4+t exec $term
     bindsym Mod4+q kill
     bindsym Mod4+d exec $menu
-    bindsym Mod4+Shift+s exec sh -c 'grim -g "$(slurp)" "$HOME/Pictures/$(date +%Y-%m-%d_%H-%M-%S).png"'
-    bindsym Mod4+Shift+r exec sh -c 'wf-recorder -g "$(slurp)" -f "$HOME/Videos/$(date +%Y-%m-%d_%H-%M-%S).mp4"'
+    bindsym Mod4+Shift+s exec sh -c 'grim -g "$(slurp)" "$HOME/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"'
+    bindsym Mod4+Shift+r exec sh -c 'wf-recorder -g "$(slurp)" -f "$HOME/screenshots/$(date +%Y-%m-%d_%H-%M-%S).mp4"'
     bindsym Mod4+Shift+q exec pkill -INT wf-recorder
 
     floating_modifier Mod4 normal
