@@ -1,0 +1,55 @@
+.gitconfig
+.ssh/
+.config/
+
+privite files (Documents, Downloads, work, code)
+
+keys -- rsa, gpg
+
+
+programs:
+TERMINAL
+	alacritty
+DRIVERS
+	amd-ucode vulkan-radeon
+	networkmanager network-manager-applet iwd
+	pipewire wireplumber
+	gvfs gvfs-gphoto2 gvfs-mtp gvfs-nfs
+ARCH
+	base base-devel
+	paru paru-debug 
+	efibootmgr
+	linux linux-firmware
+	wget
+	zram-generator
+	xdg-utils
+	smartmontools
+	xdg-desktop-portal-wlr
+BLUETOOTH
+	bluez bluez-utils
+DESKTOP
+	sway swaybg
+	waybar
+	brightnessctl
+	grim slurp wf-recorder
+	ly
+	mako
+	yofi
+	wl-clipboard
+WEB
+	firefox
+	qutebrowser qt6-wayland pass
+CODING
+	neovim
+	git
+	less
+	rustup
+	postgresql
+	mongosh-bin
+EXTRA
+	calc
+	imv
+	mpv
+	ranger
+	nordvpn-bin
+	evince
