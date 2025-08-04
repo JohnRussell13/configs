@@ -5,6 +5,10 @@
   "modules-left": ["sway/workspaces"],
   "modules-center": ["clock"],
   "modules-right": ["battery", "pulseaudio#output", "pulseaudio#input", "backlight", "network", "custom/ping"],
+
+  "sway/workspaces": {
+    "disable-click": true,
+  },
   
   "backlight": {
     "format": "Brightness: {percent}%"
