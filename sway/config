@@ -1,3 +1,4 @@
+#!/bin/sh
 set $left h
 set $down j
 set $up k
@@ -29,6 +30,8 @@ output * bg /home/alex/.config/sway/wallpaper.svg fill
 
 ### Key bindings
     bindsym Mod4+t exec $term
+    bindsym Mod4+n exec firefox
+    bindsym Mod4+p exec firefox --private-window
     bindsym Mod4+q kill
     bindsym Mod4+d exec $menu
     bindsym Mod4+Shift+s exec sh -c 'grim -g "$(slurp)" "$HOME/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"'
@@ -135,3 +138,5 @@ bindsym Mod4+r mode "resize"
 bar {
     swaybar_command waybar
 }
+# exec_always waybar &
+exec_always youtube-local &
