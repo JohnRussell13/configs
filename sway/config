@@ -5,7 +5,7 @@ set $up k
 set $right l
 
 set $term alacritty
-set $menu yofi
+set $menu rofi
 
 output * bg /home/alex/.config/sway/wallpaper.svg fill
 
@@ -36,7 +36,7 @@ exec swayidle -w \
     bindsym Mod4+g exec alacritty -e nvim
     bindsym Mod4+o exec env EDITOR=nvim VISUAL=nvim alacritty -e ranger
     bindsym Mod4+q kill
-    bindsym Mod4+d exec $menu
+    bindsym Mod4+d exec $menu -show drun
     bindsym Mod4+Shift+s exec sh -c 'grim -g "$(slurp)" "$HOME/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"'
     bindsym Mod4+Shift+r exec sh -c 'wf-recorder -g "$(slurp)" -f "$HOME/screenshots/$(date +%Y-%m-%d_%H-%M-%S).mp4"'
     bindsym Mod4+Shift+q exec pkill -INT wf-recorder
