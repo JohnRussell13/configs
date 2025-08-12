@@ -6,5 +6,5 @@
 .config/rofi/
 .config/sway/
 .config/waybar/
-.bashrc/
-.gitconfig/
+.bashrc
+.gitconfig
