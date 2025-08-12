@@ -1,0 +1,10 @@
+.config/alacritty/
+.config/gtk-3.0/
+.config/ly/
+.config/nvim/
+.config/ranger/
+.config/rofi/
+.config/sway/
+.config/waybar/
+.bashrc/
+.gitconfig/
