@@ -8,3 +8,5 @@
 .config/waybar/
 .bashrc
 .gitconfig
+
+documents/homepage.html
