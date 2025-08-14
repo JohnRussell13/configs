@@ -1,2 +1,0 @@
-*/30 * * * * /home/alex/scripts/cronTodoGet.sh
-0 12 * * * /home/alex/scripts/cronTodoSet.sh
