@@ -1,8 +1,11 @@
 0ad
+7zip
 alacritty
 amd-ucode
 base
 base-devel
+blender
+blobby2
 bluez
 bluez-utils
 calc
@@ -29,6 +32,7 @@ otii
 paru
 paru-debug
 postgresql
+prusa-slicer
 python-uv
 ranger
 ripgrep
