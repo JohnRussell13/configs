@@ -9,6 +9,7 @@ blobby2
 bluez
 bluez-utils
 calc
+ddgr
 efibootmgr
 firefox
 fuse2
@@ -41,11 +42,14 @@ rsync
 rustup
 slurp
 smartmontools
+so-git
 sway
 swaybg
 swaylock
+tealdeer
 thrive
 vulkan-radeon
+w3m
 waybar
 wesnoth
 wf-recorder
@@ -57,5 +61,16 @@ youtube-local
 
 brightnessctl
 iwd
+keep
 less
 pipewire-pulse
+python-appdirs
+python-build
+python-cachelib
+python-colorclass
+python-flit-core
+python-installer
+python-poetry-core
+python-pyquery
+python-pytest
+python-rich
