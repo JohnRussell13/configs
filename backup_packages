@@ -20,6 +20,7 @@ gvfs-gphoto2
 gvfs-mtp
 gvfs-nfs
 imv
+influx-cli
 linux
 linux-firmware
 ly
@@ -61,16 +62,5 @@ youtube-local
 
 brightnessctl
 iwd
-keep
 less
 pipewire-pulse
-python-appdirs
-python-build
-python-cachelib
-python-colorclass
-python-flit-core
-python-installer
-python-poetry-core
-python-pyquery
-python-pytest
-python-rich

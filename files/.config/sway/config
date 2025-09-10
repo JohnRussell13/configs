@@ -145,5 +145,7 @@ client.focused #7f1f00 #7f1f00 #ffffff #7f1f00 #000000
 bar {
     swaybar_command waybar
 }
-# exec_always waybar &
+
 exec_always youtube-local &
+
+exec_always rm /home/alex/.bash_history
