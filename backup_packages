@@ -38,7 +38,7 @@ prusa-slicer
 python-uv
 ranger
 ripgrep
-rofi-wayland
+rofi
 rsync
 rustup
 slurp
@@ -63,4 +63,5 @@ youtube-local
 brightnessctl
 iwd
 less
+libyaml
 pipewire-pulse

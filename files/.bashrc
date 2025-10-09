@@ -12,3 +12,5 @@ alias ll='ls -la'
 
 export VISUAL=nvim
 export EDITOR=nvim
+export BROWSER=w3m
+export MOZ_ENABLE_WAYLAND=1

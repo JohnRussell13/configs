@@ -78,8 +78,8 @@ end, { desc = '[R]un terminal in horizontal split and enter insert mode' })
 vim.keymap.set('n', '<leader>n', ':Neotree toggle<CR>', { noremap = true, silent = true, desc = 'Toggle Neo-tree' })
 -- New tabs
 vim.keymap.set('n', '<leader>wn', ':tabnew<CR>', { desc = 'Open new tab' })
-vim.keymap.set('n', '<leader>wl', ':tabnext<CR>', { desc = 'Go to next tab' })
-vim.keymap.set('n', '<leader>wh', ':tabprevious<CR>', { desc = 'Go to previous tab' })
+vim.keymap.set('n', '<leader>wk', ':tabnext<CR>', { desc = 'Go to next tab' })
+vim.keymap.set('n', '<leader>wj', ':tabprevious<CR>', { desc = 'Go to previous tab' })
 -- Dadbod
 vim.keymap.set('n', '<leader>d', ':DBUI<CR>', { desc = 'Start DBUI' })
 
