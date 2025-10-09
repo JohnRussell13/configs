@@ -4,7 +4,7 @@
 
   "modules-left": ["sway/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["battery", "pulseaudio#output", "pulseaudio#input", "backlight", "network", "custom/ping"],
+  "modules-right": ["battery", "pulseaudio#output", "pulseaudio#input", "backlight", "network", "custom/ping", "custom/vpn"],
 
   "sway/workspaces": {
     "disable-click": true,
@@ -25,6 +25,12 @@
 
   "custom/ping": {
     "exec": "~/.config/waybar/ping.sh",
+    "interval": 5,
+    "format": "{}"
+  },
+
+  "custom/vpn": {
+    "exec": "~/.config/waybar/vpn.sh",
     "interval": 5,
     "format": "{}"
   },

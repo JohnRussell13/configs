@@ -12,6 +12,7 @@ window#waybar {
 #battery,
 #clock,
 #custom-ping,
+#custom-vpn,
 #network,
 #pulseaudio {
   padding: 5 5 0 5px;
