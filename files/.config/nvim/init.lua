@@ -81,7 +81,7 @@ vim.keymap.set('n', '<leader>wn', ':tabnew<CR>', { desc = 'Open new tab' })
 vim.keymap.set('n', '<leader>wk', ':tabnext<CR>', { desc = 'Go to next tab' })
 vim.keymap.set('n', '<leader>wj', ':tabprevious<CR>', { desc = 'Go to previous tab' })
 -- Dadbod
-vim.keymap.set('n', '<leader>d', ':DBUI<CR>', { desc = 'Start DBUI' })
+vim.keymap.set('n', '<leader>D', ':DBUI<CR>', { desc = 'Start DBUI' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover.
@@ -773,6 +773,19 @@ require('lazy').setup({
       kulala_keymaps_prefix = '',
     },
   },
+  -- NOTE: MY CHANGES
+  {
+    'mfussenegger/nvim-dap',
+  },
+  -- NOTE: MY CHANGES
+  { 'rcarriga/nvim-dap-ui', dependencies = { 'mfussenegger/nvim-dap', 'nvim-neotest/nvim-nio' } },
+  -- NOTE: MY CHANGES
+  {
+    'julianolf/nvim-dap-lldb',
+    dependencies = { 'mfussenegger/nvim-dap' },
+    opts = { codelldb_path = '/home/alex/tools/debug/lldb/extension/adapter/codelldb' },
+  },
+  { 'mfussenegger/nvim-dap-python' },
 }, {
   ui = {
     icons = {
@@ -792,6 +805,36 @@ require('lazy').setup({
     },
   },
 })
+
+-- NOTE: MY CHANGES
+require('dap-python').setup 'uv'
+-- Keybinds for debugger
+local dap, dapui = require 'dap', require 'dapui'
+
+dap.listeners.before.attach.dapui_config = function()
+  dapui.open()
+end
+dap.listeners.before.launch.dapui_config = function()
+  dapui.open()
+end
+dap.listeners.before.event_terminated.dapui_config = function()
+  dapui.close()
+end
+dap.listeners.before.event_exited.dapui_config = function()
+  dapui.close()
+end
+
+dapui.setup()
+
+vim.keymap.set('n', '<leader>dn', function()
+  dap.continue()
+end)
+vim.keymap.set('n', '<leader>dm', function()
+  dap.toggle_breakpoint()
+end)
+vim.keymap.set('n', '<leader>dq', function()
+  dap.disconnect()
+end)
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
