@@ -50,7 +50,15 @@ sway
 swaybg
 swaylock
 tealdeer
+texlive-basic
+texlive-bibtexextra
+texlive-binextra
+texlive-latex
+texlive-latexextra
+texlive-latexrecommended
+texlive-mathscience
 thrive
+tree-sitter-cli
 vulkan-radeon
 w3m
 waybar
@@ -61,6 +69,8 @@ wl-clipboard
 xdg-desktop-portal-wlr
 xorg-xwayland
 youtube-local
+zathura
+zathura-pdf-mupdf
 
 brightnessctl
 iwd

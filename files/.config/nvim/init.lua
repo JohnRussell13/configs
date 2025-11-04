@@ -57,6 +57,12 @@ vim.opt.scrolloff = 10
 -- instead raise a dialog asking if you wish to save the current file(s)
 vim.opt.confirm = true
 
+-- NOTE: MY CHANGES
+-- Enable collapsing and expanding
+vim.opt_local.foldmethod = 'expr'
+vim.opt_local.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.opt_local.foldlevelstart = 99
+
 -- [[ Basic Keymaps ]]
 
 -- Clear highlights on search when pressing <Esc> in normal mode
@@ -683,23 +689,31 @@ require('lazy').setup({
       end
     end,
   },
-  { -- Highlight, edit, and navigate code
+  -- NOTE: MY CHANGES
+  {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    main = 'nvim-treesitter.configs', -- Sets main module to use for opts
-    -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
+    main = 'nvim-treesitter.configs',
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
-      -- Autoinstall languages that are not installed
-      auto_install = true,
-      highlight = {
-        enable = true,
-        -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
-        --  If you are experiencing weird indenting issues, add the language to
-        --  the list of additional_vim_regex_highlighting and disabled languages for indent.
-        additional_vim_regex_highlighting = { 'ruby' },
+      ensure_installed = {
+        'bash',
+        'c',
+        'diff',
+        'html',
+        'lua',
+        'luadoc',
+        'markdown',
+        'markdown_inline',
+        'query',
+        'vim',
+        'vimdoc',
+        'python',
+        'rust',
+        'latex',
       },
-      indent = { enable = true, disable = { 'ruby' } },
+      auto_install = true,
+      highlight = { enable = true },
+      indent = { enable = true },
     },
   },
   -- NOTE: MY CHANGES
@@ -785,7 +799,64 @@ require('lazy').setup({
     dependencies = { 'mfussenegger/nvim-dap' },
     opts = { codelldb_path = '/home/alex/tools/debug/lldb/extension/adapter/codelldb' },
   },
+  -- NOTE: MY CHANGES
   { 'mfussenegger/nvim-dap-python' },
+  -- NOTE: MY CHANGES
+  {
+    'williamboman/mason.nvim',
+    opts = { ensure_installed = { 'tree-sitter-cli' } },
+  },
+  -- NOTE: MY CHANGES
+  {
+    'jbyuki/nabla.nvim',
+    dependencies = {
+      'nvim-neo-tree/neo-tree.nvim',
+      'williamboman/mason.nvim',
+    },
+    lazy = true,
+
+    config = function()
+      require('nvim-treesitter.configs').setup {
+        ensure_installed = { 'latex' },
+        auto_install = true,
+        sync_install = false,
+      }
+    end,
+
+    keys = function()
+      return {
+        {
+          '<leader>p',
+          ':lua require("nabla").popup()<cr>',
+          desc = 'NablaPopUp',
+        },
+      }
+    end,
+  },
+  -- NOTE: MY CHANGES
+  {
+    'lervag/vimtex',
+    lazy = false, -- load immediately
+    config = function()
+      -- Compiler settings
+      vim.g.vimtex_compiler_method = 'latexmk'
+      vim.g.vimtex_compiler_latexmk = {
+        executable = 'latexmk',
+        build_dir = 'build', -- PDFs will be placed here
+        continuous = 1, -- auto-compile on save
+      }
+
+      -- Viewer settings (Zathura)
+      vim.g.vimtex_view_method = 'zathura'
+
+      -- Folding
+      vim.g.vimtex_fold_enabled = 1
+
+      -- Keymaps
+      vim.api.nvim_set_keymap('n', '<leader>lc', ':VimtexCompile<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '<leader>lv', ':VimtexView<CR>', { noremap = true, silent = true })
+    end,
+  },
 }, {
   ui = {
     icons = {
