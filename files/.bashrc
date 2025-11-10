@@ -9,6 +9,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 alias ll='ls -la'
+alias np='unshare -rn nvim --clean -n -c "set nobackup noswapfile noundofile"'
 
 export VISUAL=nvim
 export EDITOR=nvim
