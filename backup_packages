@@ -10,8 +10,6 @@ bluez
 bluez-utils
 calc
 ddgr
-efibootmgr
-exif
 firefox
 fuse2
 git
@@ -24,16 +22,14 @@ imv
 influx-cli
 linux
 linux-firmware
-ly
 mongosh-bin
 mpv
 neovim
 networkmanager
 nordvpn-bin
 npm
-otii
+ntp
 paru
-paru-debug
 postgresql
 prusa-slicer
 python-debugpy
@@ -44,8 +40,6 @@ rofi
 rsync
 rustup
 slurp
-smartmontools
-so-git
 sway
 swaybg
 swaylock
@@ -59,7 +53,6 @@ texlive-latexrecommended
 texlive-mathscience
 thrive
 tree-sitter-cli
-unrar
 vulkan-radeon
 w3m
 waybar
@@ -68,7 +61,6 @@ wf-recorder
 wget
 wl-clipboard
 xdg-desktop-portal-wlr
-xorg-xwayland
 youtube-local
 zathura
 zathura-pdf-mupdf
@@ -76,5 +68,4 @@ zathura-pdf-mupdf
 brightnessctl
 iwd
 less
-libyaml
 pipewire-pulse
