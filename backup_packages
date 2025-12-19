@@ -10,6 +10,8 @@ bluez
 bluez-utils
 calc
 ddgr
+docker
+docker-compose
 firefox
 fuse2
 git
@@ -61,6 +63,7 @@ wf-recorder
 wget
 wl-clipboard
 xdg-desktop-portal-wlr
+xorg-xwayland
 youtube-local
 zathura
 zathura-pdf-mupdf
