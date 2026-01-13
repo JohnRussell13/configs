@@ -16,5 +16,6 @@ export VISUAL=nvim
 export EDITOR=nvim
 export BROWSER=w3m
 export MOZ_ENABLE_WAYLAND=1
+export XDG_CURRENT_DESKTOP=sway
 
 source /usr/share/bash-completion/completions/git

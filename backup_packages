@@ -2,6 +2,7 @@
 7zip
 alacritty
 amd-ucode
+audacity
 base
 base-devel
 blender
@@ -15,6 +16,7 @@ docker-compose
 firefox
 fuse2
 git
+gomuks
 grim
 grub
 gvfs-gphoto2
@@ -32,6 +34,7 @@ nordvpn-bin
 npm
 ntp
 paru
+paru-debug
 postgresql
 prusa-slicer
 python-debugpy
