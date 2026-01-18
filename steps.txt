@@ -1,0 +1,13 @@
+Set default image viewer program
+
+xdg-mime default imv.desktop image/jpeg
+xdg-mime default imv.desktop image/png
+xdg-mime default imv.desktop image/gif
+xdg-mime default imv.desktop image/webp
+xdg-mime default imv.desktop image/tiff
+
+Screen sharing TODO
+Microphone volume TODO
+
+Rust:
+rustup default stable
