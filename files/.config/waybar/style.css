@@ -11,17 +11,21 @@ window#waybar {
 #backlight,
 #battery,
 #clock,
+#custom-firefox,
 #custom-ping,
+#custom-plus,
+#custom-wofi,
+#custom-vol_up,
+#custom-vol_down,
 #custom-vpn,
 #network,
-#pulseaudio {
-  padding: 5 5 0 5px;
-  margin: 0 5px;
+#pulseaudio{
+  padding: 10 10 8 10px;
   border-radius: 5px;
 }
 
 #workspaces button {
-    padding: 5 5 0 5px;
+    padding: 10 10 8 10px;
     background-color: transparent;
     color: #ffffff;
 }

@@ -114,6 +114,12 @@ bar {
     swaybar_command waybar
 }
 
+
+# Bind touchscreen to my monitor
+input "10176:2137:wch.cn_TouchScreen" {
+    map_to_output DP-2
+}
+
 exec_always youtube-local &
 
 exec_always wl-copy -c

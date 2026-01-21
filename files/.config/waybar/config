@@ -2,37 +2,56 @@
   "layer": "top",
   "position": "top",
 
-  "modules-left": ["sway/workspaces"],
+  "modules-left": ["sway/workspaces", "custom/plus"],
   "modules-center": ["clock"],
-  "modules-right": ["battery", "pulseaudio#output", "pulseaudio#input", "backlight", "network", "custom/ping", "custom/vpn"],
+  "modules-right": ["custom/wofi", "custom/firefox", "battery", "pulseaudio#output", "pulseaudio#input", "custom/vol_up", "custom/vol_down", "backlight", "network", "custom/ping", "custom/vpn"],
 
-  "sway/workspaces": {
-    "disable-click": true,
+  "custom/plus": {
+    "format": "+",
+    "on-click": "~/.config/waybar/new-workspace.sh",
+    "tooltip": false
   },
-  
+
   "backlight": {
-    "format": "Brightness: {percent}%"
+    "format": "Brightness: {percent}%",
+    "tooltip": false
   },
 
   "battery": {
     "format": "Battery: {capacity}%-",
-    "format-charging": "Battery: {capacity}%+"
+    "format-charging": "Battery: {capacity}%+",
+    "tooltip": false
   },
 
   "clock": {
-    "format": "{:%Y-%m-%d %H:%M}"
+    "format": "{:%Y-%m-%d %H:%M}",
+    "tooltip": false
+  },
+
+  "custom/wofi": {
+    "format": "Wofi",
+    "on-click": "exec wofi --show drun",
+    "tooltip": false
+  },
+
+  "custom/firefox": {
+    "format": "Firefox",
+    "on-click": "firefox",
+    "tooltip": false
   },
 
   "custom/ping": {
     "exec": "~/.config/waybar/ping.sh",
     "interval": 5,
-    "format": "{}"
+    "format": "{}",
+    "tooltip": false
   },
 
   "custom/vpn": {
     "exec": "~/.config/waybar/vpn.sh",
     "interval": 5,
-    "format": "{}"
+    "format": "{}",
+    "tooltip": false
   },
 
   "network": {
@@ -40,17 +59,34 @@
     "format-wifi": "Wi-Fi: {essid} ({signalStrength}%)",
     "format-ethernet": "LAN: {ifname}",
     "format-disconnected": "Disconnected",
-    "tooltip": true
+    "tooltip": false
   },
 
   "pulseaudio#input": {
     "format-source": "Mic: On",
     "format-source-muted": "",
-    "format": "{format_source}"
+    "format": "{format_source}",
+    "tooltip": false
   },
-  
+
   "pulseaudio#output": {
     "format": "Sound: {volume}%",
-    "format-muted": "Sound: Muted"
+    "format-muted": "Sound: Muted",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "tooltip": false
+  },
+
+  "custom/vol_up": {
+    "format": "+",
+    "on-click": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "tooltip": false
+  },
+
+  "custom/vol_down": {
+    "format": "−",
+    "on-click": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "tooltip": false
   }
 }

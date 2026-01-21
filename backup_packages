@@ -36,6 +36,7 @@ npm
 ntp
 paru
 paru-debug
+pavucontrol
 postgresql
 prusa-slicer
 python-debugpy
