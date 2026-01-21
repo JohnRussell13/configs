@@ -72,6 +72,7 @@
   "pulseaudio#output": {
     "format": "Sound: {volume}%",
     "format-muted": "Sound: Muted",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "tooltip": false
   },
 
