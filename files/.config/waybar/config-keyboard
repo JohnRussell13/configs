@@ -1,0 +1,56 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "modules-left": ["sway/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["battery", "pulseaudio#output", "pulseaudio#input", "backlight", "network", "custom/ping", "custom/vpn"],
+
+  "sway/workspaces": {
+    "disable-click": true,
+  },
+  
+  "backlight": {
+    "format": "Brightness: {percent}%"
+  },
+
+  "battery": {
+    "format": "Battery: {capacity}%-",
+    "format-charging": "Battery: {capacity}%+"
+  },
+
+  "clock": {
+    "format": "{:%Y-%m-%d %H:%M}"
+  },
+
+  "custom/ping": {
+    "exec": "~/.config/waybar/ping.sh",
+    "interval": 5,
+    "format": "{}"
+  },
+
+  "custom/vpn": {
+    "exec": "~/.config/waybar/vpn.sh",
+    "interval": 5,
+    "format": "{}"
+  },
+
+  "network": {
+    "interface": "wlan0",
+    "format-wifi": "Wi-Fi: {essid} ({signalStrength}%)",
+    "format-ethernet": "LAN: {ifname}",
+    "format-disconnected": "Disconnected",
+    "tooltip": true
+  },
+
+  "pulseaudio#input": {
+    "format-source": "Mic: On",
+    "format-source-muted": "",
+    "format": "{format_source}"
+  },
+  
+  "pulseaudio#output": {
+    "format": "Sound: {volume}%",
+    "format-muted": "Sound: Muted"
+  }
+}

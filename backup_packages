@@ -10,9 +10,11 @@ blobby2
 bluez
 bluez-utils
 calc
+circom-git
 ddgr
 docker
 docker-compose
+efibootmgr
 firefox
 fuse2
 git
@@ -26,7 +28,6 @@ imv
 influx-cli
 linux
 linux-firmware
-mongosh-bin
 mpv
 neovim
 networkmanager
@@ -41,10 +42,10 @@ python-debugpy
 python-uv
 ranger
 ripgrep
-rofi
 rsync
 rustup
 slurp
+sudo
 sway
 swaybg
 swaylock
@@ -65,6 +66,7 @@ wesnoth
 wf-recorder
 wget
 wl-clipboard
+wofi
 xdg-desktop-portal-wlr
 xorg-xwayland
 youtube-local

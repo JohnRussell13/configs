@@ -1,0 +1,38 @@
+* {
+  font-family: monospace;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+window#waybar {
+  background: #4f0f00;
+}
+
+#backlight,
+#battery,
+#clock,
+#custom-ping,
+#custom-vpn,
+#network,
+#pulseaudio {
+  padding: 5 5 0 5px;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+#workspaces button {
+    padding: 5 5 0 5px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+#workspaces button.focused {
+  background-color: #bf7f0f;
+  color: #ffffff;
+  border-radius: 0px;
+  font-weight: bold;
+}
+
+button:hover {
+  background: inherit;
+}

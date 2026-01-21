@@ -1,2 +1,7 @@
+circom v2.2.3 (/home/alex/.cache/paru/clone/circom-git/src/circom-git/circom):
+    circom
 espflash v3.3.0:
     espflash
+kani-verifier v0.67.0:
+    cargo-kani
+    kani
