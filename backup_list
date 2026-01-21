@@ -1,6 +1,5 @@
 .config/alacritty/
 .config/gtk-3.0/
-.config/ly/
 .config/nvim/
 .config/ranger/
 .config/rofi/
