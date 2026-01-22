@@ -4,7 +4,7 @@
 
   "modules-left": ["sway/workspaces", "custom/plus"],
   "modules-center": ["clock"],
-  "modules-right": ["network", "custom/ping", "custom/vpn", "pulseaudio#output", "custom/vol_up", "custom/vol_down", "custom/firefox", "custom/wvkbd", "custom/wofi"],
+  "modules-right": ["network", "custom/ping", "custom/vpn", "pulseaudio#output", "custom/vol_up", "custom/vol_down", "pulseaudio#input", "custom/firefox", "custom/wvkbd", "custom/wofi"],
 
   "custom/plus": {
     "format": "+",
@@ -57,6 +57,13 @@
   "custom/vol_down": {
     "format": "−",
     "on-click": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "tooltip": false
+  },
+
+  "pulseaudio#input": {
+    "format-source": "Mic: On",
+    "format-source-muted": "",
+    "format": "{format_source}",
     "tooltip": false
   },
 
