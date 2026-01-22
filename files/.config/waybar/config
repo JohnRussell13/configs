@@ -3,22 +3,12 @@
   "position": "top",
 
   "modules-left": ["sway/workspaces", "custom/plus"],
-  "modules-right": ["custom/firefox", "custom/wvkbd", "custom/wofi", "battery", "pulseaudio#output", "pulseaudio#input", "custom/vol_up", "custom/vol_down", "backlight", "network", "custom/ping", "clock", "custom/vpn"],
+  "modules-center": ["clock"],
+  "modules-right": ["network", "custom/ping", "custom/vpn", "pulseaudio#output", "custom/vol_up", "custom/vol_down", "custom/firefox", "custom/wvkbd", "custom/wofi"],
 
   "custom/plus": {
     "format": "+",
     "on-click": "~/.config/waybar/new-workspace.sh",
-    "tooltip": false
-  },
-
-  "backlight": {
-    "format": "Brightness: {percent}%",
-    "tooltip": false
-  },
-
-  "battery": {
-    "format": "Battery: {capacity}%-",
-    "format-charging": "Battery: {capacity}%+",
     "tooltip": false
   },
 
@@ -27,21 +17,11 @@
     "tooltip": false
   },
 
-  "custom/wvkbd": {
-    "format": "Wvkbd",
-    "on-click": "~/.config/waybar/keybord.sh",
-    "tooltip": false
-  },
-
-  "custom/wofi": {
-    "format": "Wofi",
-    "on-click": "exec wofi --show drun",
-    "tooltip": false
-  },
-
-  "custom/firefox": {
-    "format": "Firefox",
-    "on-click": "firefox",
+  "network": {
+    "interface": "wlan0",
+    "format-wifi": "Wi-Fi: {essid} ({signalStrength}%)",
+    "format-ethernet": "LAN: {ifname}",
+    "format-disconnected": "Disconnected",
     "tooltip": false
   },
 
@@ -56,21 +36,6 @@
     "exec": "~/.config/waybar/vpn.sh",
     "interval": 5,
     "format": "{}",
-    "tooltip": false
-  },
-
-  "network": {
-    "interface": "wlan0",
-    "format-wifi": "Wi-Fi: {essid} ({signalStrength}%)",
-    "format-ethernet": "LAN: {ifname}",
-    "format-disconnected": "Disconnected",
-    "tooltip": false
-  },
-
-  "pulseaudio#input": {
-    "format-source": "Mic: On",
-    "format-source-muted": "",
-    "format": "{format_source}",
     "tooltip": false
   },
 
@@ -92,6 +57,24 @@
   "custom/vol_down": {
     "format": "−",
     "on-click": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "tooltip": false
+  },
+
+  "custom/firefox": {
+    "format": "Firefox",
+    "on-click": "firefox",
+    "tooltip": false
+  },
+
+  "custom/wvkbd": {
+    "format": "Wvkbd",
+    "on-click": "~/.config/waybar/keybord.sh",
+    "tooltip": false
+  },
+
+  "custom/wofi": {
+    "format": "Wofi",
+    "on-click": "exec wofi --show drun",
     "tooltip": false
   }
 }
