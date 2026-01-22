@@ -68,6 +68,7 @@ wf-recorder
 wget
 wl-clipboard
 wofi
+wvkbd
 xdg-desktop-portal-wlr
 xorg-xwayland
 youtube-local

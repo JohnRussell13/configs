@@ -3,8 +3,7 @@
   "position": "top",
 
   "modules-left": ["sway/workspaces", "custom/plus"],
-  "modules-center": ["clock"],
-  "modules-right": ["custom/wofi", "custom/firefox", "battery", "pulseaudio#output", "pulseaudio#input", "custom/vol_up", "custom/vol_down", "backlight", "network", "custom/ping", "custom/vpn"],
+  "modules-right": ["custom/firefox", "custom/wvkbd", "custom/wofi", "battery", "pulseaudio#output", "pulseaudio#input", "custom/vol_up", "custom/vol_down", "backlight", "network", "custom/ping", "clock", "custom/vpn"],
 
   "custom/plus": {
     "format": "+",
@@ -25,6 +24,12 @@
 
   "clock": {
     "format": "{:%Y-%m-%d %H:%M}",
+    "tooltip": false
+  },
+
+  "custom/wvkbd": {
+    "format": "Wvkbd",
+    "on-click": "~/.config/waybar/keybord.sh",
     "tooltip": false
   },
 

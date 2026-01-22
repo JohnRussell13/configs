@@ -14,10 +14,11 @@ window#waybar {
 #custom-firefox,
 #custom-ping,
 #custom-plus,
-#custom-wofi,
 #custom-vol_up,
 #custom-vol_down,
 #custom-vpn,
+#custom-wkbd,
+#custom-wofi,
 #network,
 #pulseaudio{
   padding: 10 10 8 10px;
