@@ -72,7 +72,8 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 -- NOTE: MY CHANGES
 -- Errors
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show [E]rror diagnostics in floating window for current line' })
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float,
+  { desc = 'Show [E]rror diagnostics in floating window for current line' })
 -- Terminal
 vim.keymap.set('n', '<leader>r', function()
   vim.cmd 'split'
@@ -127,7 +128,7 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
-  { -- Adds git related signs to the gutter, as well as utilities for managing changes
+  {                   -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
     opts = {
       signs = {
@@ -149,8 +150,8 @@ require('lazy').setup({
       },
       signs_staged_enable = true,
       signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
-      numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
-      linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
+      numhl = false,     -- Toggle with `:Gitsigns toggle_numhl`
+      linehl = false,    -- Toggle with `:Gitsigns toggle_linehl`
       word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff`
       watch_gitdir = {
         follow_files = true,
@@ -169,7 +170,7 @@ require('lazy').setup({
       current_line_blame_formatter = '<author>, <author_time:%R> - <summary>',
       sign_priority = 6,
       update_debounce = 100,
-      status_formatter = nil, -- Use default
+      status_formatter = nil,  -- Use default
       max_file_length = 40000, -- Disable if file is longer than this (in lines)
       preview_config = {
         -- Options passed to nvim_open_win
@@ -377,7 +378,7 @@ require('lazy').setup({
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
       -- Useful status updates for LSP.
-      { 'j-hui/fidget.nvim', opts = {} },
+      { 'j-hui/fidget.nvim',       opts = {} },
 
       -- Allows extra capabilities provided by blink.cmp
       'saghen/blink.cmp',
@@ -589,7 +590,7 @@ require('lazy').setup({
   {
     'kristijanhusak/vim-dadbod-ui',
     dependencies = {
-      { 'tpope/vim-dadbod', lazy = true },
+      { 'tpope/vim-dadbod',                     lazy = true },
       { 'kristijanhusak/vim-dadbod-completion', ft = { 'sql', 'mysql', 'plsql' }, lazy = true },
     },
     cmd = {
@@ -666,7 +667,7 @@ require('lazy').setup({
   },
 
   -- Highlight todo, notes, etc in comments
-  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+  { 'folke/todo-comments.nvim', event = 'VimEnter',                                                 dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
@@ -792,12 +793,12 @@ require('lazy').setup({
     'mfussenegger/nvim-dap',
   },
   -- NOTE: MY CHANGES
-  { 'rcarriga/nvim-dap-ui', dependencies = { 'mfussenegger/nvim-dap', 'nvim-neotest/nvim-nio' } },
+  { 'rcarriga/nvim-dap-ui',     dependencies = { 'mfussenegger/nvim-dap', 'nvim-neotest/nvim-nio' } },
   -- NOTE: MY CHANGES
   {
     'julianolf/nvim-dap-lldb',
     dependencies = { 'mfussenegger/nvim-dap' },
-    opts = { codelldb_path = '/home/alex/tools/debug/lldb/extension/adapter/codelldb' },
+    opts = { codelldb_path = '/usr/bin/codelldb' },
   },
   -- NOTE: MY CHANGES
   { 'mfussenegger/nvim-dap-python' },
@@ -843,7 +844,7 @@ require('lazy').setup({
       vim.g.vimtex_compiler_latexmk = {
         executable = 'latexmk',
         build_dir = 'build', -- PDFs will be placed here
-        continuous = 1, -- auto-compile on save
+        continuous = 1,      -- auto-compile on save
       }
 
       -- Viewer settings (Zathura)
