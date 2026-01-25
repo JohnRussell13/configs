@@ -2,6 +2,7 @@
 7zip
 alacritty
 amd-ucode
+amfora
 audacity
 base
 base-devel
@@ -9,14 +10,17 @@ blender
 blobby2
 bluez
 bluez-utils
+bmm-bin
 calc
 circom-git
 ddgr
 docker
 docker-compose
 efibootmgr
+fclones
 firefox
 fuse2
+gallery-dl
 git
 gomuks
 grim
@@ -34,8 +38,11 @@ networkmanager
 nordvpn-bin
 npm
 ntp
+pacseek
+pandoc-bin
 paru
 paru-debug
+pass
 postgresql
 prusa-slicer
 python-debugpy
@@ -71,6 +78,7 @@ wvkbd
 xdg-desktop-portal-wlr
 xorg-xwayland
 youtube-local
+youtube-tui-full-bin
 zathura
 zathura-pdf-mupdf
 
@@ -78,3 +86,4 @@ brightnessctl
 iwd
 less
 pipewire-pulse
+yt-dlp-git
