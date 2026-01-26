@@ -18,9 +18,6 @@ echo "LANG=$LOCALE" >/etc/locale.conf
 echo "==> Setting hostname"
 echo "$HOSTNAME" >/etc/hostname
 
-echo "==> Enabling services"
-systemctl enable NetworkManager
-
 echo "==> Setting root password"
 passwd
 
