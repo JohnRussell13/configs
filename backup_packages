@@ -29,6 +29,7 @@ imv
 influx-cli
 linux
 linux-firmware
+minecraft-launcher
 mpv
 neovim
 networkmanager
@@ -41,6 +42,7 @@ paru
 paru-debug
 pass
 postgresql
+prismlauncher
 prusa-slicer
 python-debugpy
 python-uv
