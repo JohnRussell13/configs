@@ -21,12 +21,9 @@ echo "$HOSTNAME" >/etc/hostname
 echo "==> Setting root password"
 passwd
 
-echo "==> Installing packages"
-./packages.sh
-
 echo "==> Creating user: $USERNAME"
 if ! id "$USERNAME" &>/dev/null; then
-    useradd -m -g users -G nordvpn,uucp,input,wheel "$USERNAME"
+    useradd -m -g users -G uucp,input,wheel "$USERNAME"
     passwd "$USERNAME"
 fi
 
