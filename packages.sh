@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PKG_FILE=packages.txt
+PKG_FILE=backup_packages
 
 # Ensure paru exists
 if ! command -v paru >/dev/null; then
