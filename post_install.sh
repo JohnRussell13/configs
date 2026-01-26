@@ -30,13 +30,6 @@ fi
 echo "==> Configuring sudo"
 sed -i 's/^# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 
-echo "==> Setting image defaults for $USERNAME"
-su - "$USERNAME" -c '
-for t in jpeg png gif webp tiff; do
-  xdg-mime default imv.desktop image/$t
-done
-'
-
 echo "==> Installing GRUB (UEFI)"
 read -rp "EFI partition (e.g. /dev/sda1 or /dev/nvme0n1p1): " EFI_PART
 if [[ ! -b "$EFI_PART" ]]; then
