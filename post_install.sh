@@ -21,6 +21,12 @@ echo "$HOSTNAME" >/etc/hostname
 echo "==> Setting root password"
 passwd
 
+echo "==> Installing must-haves"
+pacman -S sudo grub efibootmgr networkmanager
+
+echo "==> Enabling services"
+systemctl enable NetworkManager
+
 echo "==> Creating user: $USERNAME"
 if ! id "$USERNAME" &>/dev/null; then
     useradd -m -g users -G uucp,input,wheel "$USERNAME"
