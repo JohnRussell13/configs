@@ -5,14 +5,14 @@ PKG_FILE=packages.txt
 
 # Ensure paru exists
 if ! command -v paru >/dev/null; then
-    sudo pacman -S --needed --noconfirm base-devel git
+    pacman -S --needed --noconfirm base-devel git
     tmp=$(mktemp -d)
     git clone https://aur.archlinux.org/paru.git "$tmp/paru"
     (cd "$tmp/paru" && makepkg -si --noconfirm)
     rm -rf "$tmp"
 fi
 
-sudo pacman -Syu --noconfirm
+pacman -Syu --noconfirm
 
 # Read file into two arrays split by empty line
 mapfile -t lines <"$PKG_FILE"
