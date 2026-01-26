@@ -27,7 +27,7 @@ for pkg in "${lines[@]}"; do
 done
 
 # Install
-paru -S --needed --noconfirm "${explicit[@]}"
-paru -S --needed --noconfirm --asdeps "${deps[@]}"
+paru -S --needed "${explicit[@]}"
+paru -S --needed --asdeps "${deps[@]}"
 
 echo "All packages installed."
