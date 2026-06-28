@@ -3,6 +3,7 @@
 alacritty
 amd-ucode
 amfora
+android-tools
 audacity
 base
 base-devel
@@ -14,9 +15,11 @@ circom-git
 codelldb-bin
 ddgr
 efibootmgr
+exiv2
 fclones
 firefox
 gallery-dl
+gimp
 git
 godot
 gomuks
@@ -29,11 +32,13 @@ mpv
 neovim
 networkmanager
 nordvpn-bin
+npm
 ntp
 pacseek
 pandoc-bin
 paru
 paru-debug
+pavucontrol
 pipewire-pulse
 prismlauncher
 prusa-slicer
@@ -44,6 +49,7 @@ ranger
 ripgrep
 rsync
 rustup
+simple-mtpfs
 sshfs
 sudo
 sway
@@ -62,6 +68,7 @@ tree-sitter-cli
 vulkan-radeon
 w3m
 waybar
+wayvnc
 wesnoth
 wf-recorder
 wget
